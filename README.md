@@ -1,13 +1,13 @@
 # 🌍 Kemet Tourism Website
 
-موقع سياحي باسم **Kemet** يعرض أهم المعالم السياحية في مصر بطريقة جذابة وسهلة الاستخدام.
+A tourism website called **Kemet** that showcases the most famous tourist attractions in Egypt in an attractive and user-friendly way.
 
 ## ✨ Features
 
-- تصميم عصري وجذاب
-- صفحة رئيسية تفاعلية
-- عرض أماكن سياحية مميزة
-- تجربة مستخدم سهلة وبسيطة
+- Modern and attractive design
+- Interactive homepage
+- Display of top tourist destinations
+- Simple and smooth user experience
 
 ## 🖼️ Home Page Preview
 
