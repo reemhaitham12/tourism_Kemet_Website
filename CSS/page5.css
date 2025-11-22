@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Changa", sans-serif;
+}
+
+
+
+
+body {
+  width: auto;
+  height: auto;
+}
+
+
+
+.hero-section {
+  /* background: #f9f9f9; */
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* المستطيل الذهبي الكبير */
+.gold-box {
+  position: relative;
+  background-image: url("../assets/img11.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  /* overflow: hidden; */
+  padding: 80px 40px;
+  width: 80%;
+  max-width: 1100px;
+  z-index: 1;
+}
+
+/* الطبقة اللى تعمل تأثير الستارة */
+.gold-box::before {
+  content: "";
+  position: absolute;
+  border-radius: 24px;
+  inset: 0; /* تغطي كل الخلفية */
+  background-color: rgba(179, 109, 71, 0.9); /* نفس اللون لكن شفاف */
+  z-index: 0; /* تحت النص والصور */
+}
+
+/* نخلي النص يظهر فوق الستارة */
+.text-content,
+.girl-img,
+.cloud-img,
+.balloon-img,
+.small-gold-box {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* النص */
+.text-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+}
+
+.text-content h1 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: right;        /* يخلي النص يروح لليمين */
+  color: #EBD391;           /* اللون الذهبي الفاتح */
+  margin-right: 40px;      /* مسافة تحت العنوان */
+  line-height: 1.4;         /* تحسين المسافات بين السطور */
+}
+
+
+.text-content p {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: medium;
+  color: #ffffff;
+}
+
+/* مربع خلف البنت */
+.small-gold-box {
+  position: absolute;
+  right: -100px;
+  bottom: 60px;
+  width: 220px;
+  height: 220px;
+  background: #EBD391;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* bird */
+.bird-img{
+  right:10px;
+  bottom: 119px;
+  z-index: 99;
+}
+/* البنت */
+.girl-img {
+  right: -90px;
+  bottom: 55px;
+  width: 360px;
+  z-index: 1;
+}
+
+
+/* السحابة */
+.cloud-img {
+  right: -130px;
+  bottom: -105px;
+  width: 350px;
+  z-index: 3;
+}
+/* backgroundBallon */
+.backgroundBallon{
+  left:-40px;
+  top:120px;
+  width:320px;
+}
+
+/* البالون */
+.balloon-img {
+  left: -20px; /* جزء خارج المستطيل */
+  top: 125px;
+  width: 200px;
+  z-index: 999;
+}
+
+
+
+
+
+
+
+/* row مع gap */
+.row-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;            /* المسافة بين الكروت */
+  justify-content: center;
+}
+
+/* الكارت */
+.custom-card {
+  background-color: #EBD391; /* خلفية ذهبية فاتحة */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  
+}
+
+/* الصورة */
+.custom-card img {
+  width: 95%;
+  height: 100%;
+  object-fit: cover; /* تغطي المساحة بدون تشويه */
+  display: block;
+  border-radius: 12px;
+}
+.card-img{
+  position: relative;
+  top: 20px;
+  right: 4px;
+}
+
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* لمنع خروج الصورة */
+  height: 250px; /* تحددي ارتفاع الكارت */
+  border-radius: 20px 20px 20px 20px; /* إذا تحبي زاوية للكارد */
+}
+
+.card-title-overlay {
+  position: absolute;
+  bottom: 85px; /* المسافة من تحت الصورة */
+  right: 95px;  /* المسافة من اليمين */
+  color: #EBD391;
+  font-size: 45px; /* غير الحجم حسب الحاجة */
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+/* النص */
+.custom-card .card-text {
+  color: #5C2000;
+  font-weight: 500;
+  margin-bottom: 12px;
+  
+}
+
+/* زر المزيد */
+.btn-more-left {
+  position: relative;
+  left: -220px;
+ margin-bottom: 10px;
+  background-color: #5C2000 !important; /* بني */
+  color: #EBD391 !important;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 500;
+   /* يظهر على الشمال */
+  transition: all 0.3s ease;
+}
+
+.btn-more-left:hover {
+  background-color: #743010;
+  color: #fff;
+}
+
+/* hover effect للكارت */
+.custom-card:hover {
+  transform: translateY(-6px);
+}
+
+
+.info-exper{
+  background-color: #FDFFDB;
+  border-radius: 24px;
+  width: 100vw; /* العرض الكامل للشاشة */
+  padding: 160px; /* المسافة فوق وتحت */
+  margin-bottom: 30px;
+}
+/* النص */
+.text-exper h2{
+  color: #B36D47;
+  font-weight: 600;
+  font-size: 48px;
+}
+.text-exper p{
+  color: #5C2000;
+  font-weight: 500;
+  font-size: 36px;
+}
+.images-side{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  gap: 20px; /* مسافة بين الصور */
+}
+.img-total{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  left: -130px;
+}
+
+.images-side .side-img {
+  width: 65%;  /* تصغير حجم الصورة بالنسبة للعمود */
+  object-fit: cover;
+  border-radius: 15px;
+}
+.images-side .side-Three {
+  width: 40%;  /* تصغير حجم الصورة بالنسبة للعمود */
+  object-fit: cover;
+  border-radius: 15px;
+  z-index: 33;
+  position: absolute;
+  right: 155px;
+}
+
+
+/* back icon */
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0; /* في البداية نص مخفي */
+  padding: 10px 15px;
+  background-color: #EBD391;
+  color: #5C2000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 800;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 50px; /* يبدأ صغير */
+  text-decoration: none;
+  position: absolute;     /* علشان يكون ثابت */
+  left: 120px;          /* يحطه على الشمال */
+  top: -65px;           /* فوق شوية */
+  direction: ltr;      /* مهم جدًا! يخلي السهم يبان صح */
+  z-index: 1000; 
+}
+.back-btn .arrow {
+  font-size: 30px;
+  font-weight: 900;
+}
+.back-btn .back-text {
+  font-size: large;
+  opacity: 0;          /* مخفي في البداية */
+  white-space: nowrap;
+  margin-left: 10px;
+  transition: opacity 0.3s ease, margin-left 0.3s ease;
+}
+
+.back-btn:hover {
+  width: 120px; /* يكبر بالعرض عند hover */
+}
+
+.back-btn:hover .back-text {
+  opacity: 1;          /* يظهر النص */
+  margin-left: 10px;   /* مسافة بين السهم والكلمة */
+}
+
+
+/* شاشات أصغر من 992px (Bootstrap md breakpoint) */
+@media (max-width: 991px) {
+  .info-exper {
+    padding: 80px 20px; /* تصغير المسافة للفيو الأصغر */
+  }
+
+  .row.align-items-center {
+    flex-direction: column; /* النص فوق الصور */
+  }
+
+  .images-side {
+    position: relative; /* إزالة absolute الداخلي */
+    flex-direction: column; /* ترتيب الصور عمودي */
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center; /* توسيط الصور */
+    margin-top: 30px;
+  }
+
+  .img-total {
+    position: static; /* إلغاء الـ absolute */
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* توسيط الصور */
+  }
+
+  .images-side .side-Three {
+    position: static; /* تصبح الصورة الثالثة ضمن العمود */
+    right: auto;
+    width: 70%; /* تصغير بسيط للصورة */
+    margin-top: 0;
+  }
+
+  .images-side .side-img {
+    width: 70%; /* الصور الرئيسية تصغر شويه */
+  }
+
+  /* النص */
+  .text-exper h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .text-exper p {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+
+/* استجابة الموبايل */
+@media (max-width: 768px) {
+  .custom-card .card-img-top {
+    height: 180px;
+  }
+  .card-title-overlay {
+    font-size: 1rem;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .row-cards {
+    gap: 15px;
+  }
+  .custom-card {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .gold-box {
+    width: 95%;
+    padding: 40px 20px;
+  }
+
+  /* النص */
+  .text-content h1 {
+    font-size: 28px;
+    text-align: center; /* النص يروح في المنتصف */
+    margin-right: 0;
+  }
+
+  .text-content p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* البنت */
+  .girl-img {
+    position: static;  /* تجعل الصورة ضمن التدفق العادي */
+    width: 200px;      /* تصغير حجم الصورة */
+    margin: 20px auto 0; /* تظهر تحت المستطيل */
+    display: block;
+  }
+
+  /* الطائر */
+  .bird-img {
+    position: static;
+    width: 100px;
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  /* السحابة */
+  .cloud-img {
+    position: static;
+    width: 150px;
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  /* مربع خلف البنت */
+  .small-gold-box {
+    display: none; /* ممكن نخفيه على الموبايل */
+  }
+
+  /* البالون */
+  .balloon-img {
+    position: static;
+    width: 120px;
+    margin: 20px auto 0;
+    display: block;
+  }
+}

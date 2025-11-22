@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Changa", sans-serif;
+}
+body {
+  width: auto;
+  height: auto;
+}
+h1 {
+  padding: 0 60px;
+}
+
+/* * $$ body */
+
+.logo {
+  width: auto;        /* يحافظ على نسبة الصورة */
+  max-height: 120px;   /* حجم مناسب للعرض العادي - غيّري الرقم لو حابة أصغر */
+  display: block;
+  object-fit: contain;
+}
+
+/* --- تقليل ارتفاع الـ navbar --- */
+.navbar {
+  padding: 6px 0;           /* يقلل المساحة العلوية والسفلية للـ navbar */
+  min-height: 0;            /* يلغي أي ارتفاع افتراضي كبير */
+  display: flex;
+  align-items: center;
+}
+/* لو البادينج الافتراضي للـ container-fluid كبير نعدّله */
+.navbar .container-fluid {
+  padding: 6px 60px;        /* نفس مسافة الـ body من الجوانب، وقللنا العمودي */
+  align-items: center;
+}
+
+.navbar-bg {
+  margin: 6px auto; /* قللنا المسافة فوق وتحت */
+  width: 40%;
+}
+
+.navbar-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* اللينكات */
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* يجيب اللينكات في النص */
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+  color: #5c2030 !important;
+  font-weight: 500;
+  position: relative;
+  
+  padding: 4px 10px;
+  transition: color 0.3s ease;
+  line-height: 1;
+  font-size: 18px;
+}
+
+
+/* يظهر الخط فقط عند الحالة active */
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background-color: #ebd391;
+  border-radius: 1px;
+  transform: translateX(-50%) scaleX(1);
+  transform-origin: center;
+  /* animation: underline-grow 0.4s ease forwards; */
+}
+
+/* 👇 ده السطر المهم 👇 */
+.navbar-nav .nav-link.active::after {
+  animation-name: underline-grow; /* تعريف الاسم */
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  /* animation-fill-mode: forwards; */
+}
+
+
+/* @keyframes underline-grow {
+  from {
+    transform: translateX(-50%) scaleX(0);
+  }
+  to {
+    transform: translateX(-50%) scaleX(1);
+  }
+} */
+
+/* تغيير اللون والخط وقت الـ active */
+.navbar-nav .nav-link.active {
+  font-weight: 700;
+  color: #3e1300 !important;
+}
+
+
+
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.banner {
+  position: relative;
+  width: 90%;
+  margin: 40px auto;
+  background-image: url("../assets/img10.png"); /* ← غيّريها بالصورة الخلفية */
+  background-size:cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #fff;
+  padding: 80px;
+  direction: rtl; /* عشان الكلام يبقى من اليمين */
+}
+
+/* لون الـ Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(136, 98, 26, 0.55); /* طبقة شفافة بلون ذهبي */
+  z-index: 1;
+}
+
+/* الدائرة والطيارة */
+.circle {
+  position: absolute;
+  left: 110px;
+  top: -190px;
+  width: 355px;
+  height: 355px;
+  background-color: #e4c77a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.plane {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 380px;
+  height: auto;
+  position: relative;
+  z-index: 4;
+}
+
+/* النص */
+.content {
+  position: relative;
+  z-index: 5;
+  text-align: right;
+  max-width: 600px;
+  /* margin-right: auto; */
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  color: #f2d693;
+  margin-bottom: 20px;
+}
+
+.content p {
+  color:#FDFFDB;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* الزرار */
+.btn-box {
+  display: flex;
+  justify-content: flex-start; /* الزرار ناحية الشمال */
+}
+
+.more-btn {
+  background: transparent;
+  color: #FDFFDB;
+  border: 2px solid #FDFFDB;
+  padding: 10px 35px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  left:-100px;
+}
+
+.more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* الشكل العام للقسم */
+.re7lateek {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* يبعد الجملة يمين والصورة شمال */
+  padding: 10px 100px;
+  direction: rtl; /* لأن النص عربي */
+}
+
+/* الجملة */
+.re7lateek .text-box h2 {
+  font-size: 54px;
+  font-weight: 600;
+  color: #B36D47;
+  text-align: right;
+  
+}
+
+/* الصورة */
+.re7lateek .image-box img {
+  width: 380px;
+  height: auto;
+  display: block;
+}
+
+.image-grid {
+  padding: 20px 0;
+}
+
+/* card  */
+.cardies {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 10px auto;
+  transition: all 0.4s ease;
+  max-width: 300px; 
+  /* عرض الكارت على قد الصورة */
+}
+
+.cardies img {
+  object-fit:contain;
+  width: 100%;
+  /* height: auto; */
+  display: block;
+}
+
+/* طبقة اللون من اليمين */
+.cardies::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(120, 80, 40, 0.85),
+    rgba(120, 80, 40, 0.2)
+  );
+  transition: background 0.4s ease;
+}
+
+/* النص */
+.content-txt {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: right;
+  z-index: 2;
+}
+.content-txt h3{
+  color: #EBD391;
+  font-weight: 600;
+  font-size: 30px;
+}
+.content-txt p{
+  padding-block: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #FDFFDB;
+}
+/* الزرار */
+.cardies .btn {
+  all:unset;
+  position: absolute;
+  bottom: 15px;
+  left: -100px;
+  background-color: #FDFFDB;
+  color: #EBD391;
+  padding: 8px 15px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 12;
+}
+
+/* عند الـ hover */
+.cardies:hover::before {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.25)
+  );
+}
+
+.cardies:hover .btn {
+  left: 20px;
+  opacity: 1;
+  background-color: #FDFFDB;
+}
+
+/* المسافة بين كل كارت والتاني */
+.col-md-6 {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* end card */
+/* القسم العام */
+.company {
+  padding: 10px 100px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* العنوان */
+.company .text-box h2 {
+  font-size:36px;
+  color: #B36D47;
+  margin-bottom: 40px;
+}
+
+/* صف المستطيلات */
+.company-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; /* ضعف عرض الصفحة علشان يتحرك */
+  animation: moveRow 8s linear infinite alternate;
+}
+
+/* شكل كل مستطيل */
+.company-card {
+  background-color: #f2d693;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 25px;
+  border-radius: 12px;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* تأثير hover */
+.company-card:hover {
+  transform: scale(1.07);
+}
+
+/* أنيميشن الحركة يمين ↔ شمال */
+@keyframes moveRow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.card-text {
+   padding: 40px;
+  display: flex;
+  justify-content: center; /* في المنتصف أفقيًا */
+  align-items: center; /* في المنتصف عموديًا */
+  text-align: center; /* النص في المنتصف */
+  background-color: transparent; /* ممكن تغيري اللون لو حبيتي */
+}
+
+.card-text p {
+  font-size: 1.5rem;
+  color: #B36D47; /* لون الخط */
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+
+
+/* أنيميشن خاص بالموبايل */
+@keyframes moveRowMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+
+
+
+
+
+/* الموبايل */
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* الدائرة والطيارة */
+  .circle {
+    position: relative;
+    margin: 0 auto 30px;
+    width: 220px; /* كبرنا حجمها */
+    height: 220px;
+  }
+
+  .plane {
+    width: 350px; /* الطيارة أكبر */
+    top: 70px;
+    left: 0;
+    z-index:12;
+  }
+
+  /* النص */
+  .content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* الزرار */
+  .btn-box {
+    justify-content: center; /* وسط الزرار */
+  }
+
+  .more-btn {
+    position: static; /* شيل التحديد المطلق */
+    margin-top: 10px;
+  }
+
+  .content h2 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+  .re7lateek {
+    flex-direction: column; /* يخليهم تحت بعض */
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .re7lateek .text-box {
+    margin-bottom: 20px;
+  }
+
+  .re7lateek .text-box h2 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .re7lateek .image-box img {
+    width: 200px; /* نكبر الصورة شوية */
+  }
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-img {
+    width: 90%; /* تملى العرض كله */
+    margin-bottom: 15px;
+  }
+   .company .text-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .company-row {
+    width: 250%; /* أوسع علشان الأنيميشن يبان أكتر */
+    animation: moveRowMobile 10s linear infinite alternate;
+  }
+
+  .company-card {
+    min-width: 120px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

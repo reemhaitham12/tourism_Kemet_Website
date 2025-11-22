@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kemet - اكتشف مصر</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ملفاتك -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../CSS/page5.css" />
+  </head>
+
+  <body>
+    <!-- start header -->
+    <header class="main-header">
+      <!-- الخلفية الزخرفية -->
+      <div class="navbar-bg">
+        <img src="../assets/Rectangle 1.png" alt="Decorative rectangle" />
+      </div>
+
+      <!-- الـ Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a href="../index.html">
+            <img
+              src="../assets/kemetLogo.png"
+              class="img-fluid logo"
+              alt="Kemet Logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- index -->
+                <a class="nav-link" href="../index.html">الصفحة الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <!-- page1 -->
+                <a class="nav-link active" href="./page1.html"
+                  >الأماكن السياحية</a
+                >
+              </li>
+              <li class="nav-item">
+                <!-- page2 -->
+                <a class="nav-link" href="./page2.html">صفحة التفاعلات</a>
+              </li>
+              <li class="nav-item">
+                <!-- page3 -->
+                <a class="nav-link" href="./page3.html">شركات معتمدة</a>
+              </li>
+              <li class="nav-item">
+                <!-- page4 -->
+                <a class="nav-link" href="./page4.html">الملف الشخصي</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header -->
+    <!-- start sign -->
+    <div class="login-icon" id="loginIcon">
+      <img src="../assets/icon.png" alt="Login" />
+    </div>
+
+    <!-- المودال -->
+    <div class="login-modal" id="loginModal">
+      <div class="modal-content" id="mainBox">
+        <div class="buttons">
+          <button class="btn-login" id="openLoginBox">تسجيل الدخول</button>
+          <button class="btn-signup">انشاء حساب</button>
+        </div>
+      </div>
+
+      <div class="login-box" id="loginBox">
+        <h3>تسجيل الدخول</h3>
+        <input type="text" placeholder="الاسم" />
+        <input type="email" placeholder="الايميل " />
+
+        <div class="or-divider">
+          <span></span>
+          <p>or</p>
+          <span></span>
+        </div>
+
+        <div class="social-icons">
+          <img src="../assets/facebook.png" />
+          <img src="../assets/instagram.png" />
+          <img src="../assets/google.png" />
+        </div>
+
+        <button class="save-btn">حفظ البيانات</button>
+        <p class="welcome-text">
+          أهلاً وسهلاً يسعدنا انضمامك إلينا <br />اليوم
+        </p>
+      </div>
+      <!-- بوكس إنشاء حساب -->
+      <div class="login-box" id="signupBox">
+        <h3>إنشاء حساب</h3>
+
+        <input type="text" placeholder="الاسم" />
+        <input type="email" placeholder="الايميل " />
+        <input type="password" placeholder="كلمة السر" />
+        <input type="password" placeholder="تأكيد كلمة السر" />
+
+        <button class="save-btn">إنشاء الحساب</button>
+
+        <p class="welcome-text">
+          أهلاً وسهلاً يسعدنا انضمامك إلينا <br />اليوم
+        </p>
+      </div>
+    </div>
+
+    <!-- end sign -->
+
+    <!-- icon back -->
+     <div class="position-relative">
+      <a href="./page1.html" class="back-btn">
+  <span class="arrow">&larr;</span>
+  <span class="back-text">Back</span>
+</a>
+     </div>
+
+
+    <!-- ========== القسم الرئيسي (Hero Section) ========== -->
+    <section class="hero-section position-relative text-center">
+      <div class="container position-relative">
+        <!-- المستطيل الذهبي الكبير -->
+        <div class="gold-box mx-auto position-relative">
+          <!-- النص -->
+          <div class="text-content">
+            <h1 class="fw-bold mb-3">
+              اكتشف مصر… أرض التاريخ <br />والسحر والطبيعة!
+            </h1>
+            <p class="lead">معنا… رحلتك أسهل، وأجمل، وأقرب مما تتخيل.</p>
+          </div>
+
+          <!-- مربع ذهبي خلف البنت -->
+          <div class="small-gold-box"></div>
+          <!-- bird -->
+          <img
+            src="../assets/bird.png"
+            alt="bird"
+            class="bird-img position-absolute"
+          />
+          <!-- البنت -->
+          <img
+            src="../assets/girl2.png"
+            alt="سائحة"
+            class="girl-img position-absolute"
+          />
+
+          <!-- السحابة -->
+          <img
+            src="../assets/cloud.png"
+            alt="سحابة"
+            class="cloud-img position-absolute"
+          />
+          <!-- background ballon -->
+          <img
+            src="../assets/Ellipse2.png"
+            alt="backgroundBallon"
+            class="backgroundBallon position-absolute"
+          />
+          <!-- البالون -->
+          <img
+            src="../assets/ballon.png"
+            alt="بالون"
+            class="balloon-img position-absolute"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== الوجهات السياحية ========== -->
+    <section class="destinations-section m-5">
+      <div class="container">
+        <h2 class="mb-4 text-end color-brown heading-decor">
+          <span class="word-bg">أماكن</span>
+          <span>تستحق الاكتشاف</span> !
+        </h2>
+
+        <div class="row row-cards">
+  <div class="col-md-3 col-sm-6">
+    <div class="custom-card">
+      <div class="img-wrapper">
+        <img src="../assets/Mask group1.png" alt="سيوة" class="card-img">
+        <h5 class="card-title-overlay">سيوة!</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">"سيوة… واحة السحر والهدوء وسط الصحراء."</p>
+        <a href="#" class="btn btn-more-left">المزيد</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6">
+    <div class="custom-card">
+      <div class="img-wrapper">
+        <img src="../assets/Mask group1.png" alt="سيوة" class="card-img">
+        <h5 class="card-title-overlay">سيوة!</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">"سيوة… واحة السحر والهدوء وسط الصحراء."</p>
+        <a href="#" class="btn btn-more-left">المزيد</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6">
+    <div class="custom-card">
+      <div class="img-wrapper">
+        <img src="../assets/Mask group1.png" alt="سيوة" class="card-img">
+        <h5 class="card-title-overlay">سيوة!</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">"سيوة… واحة السحر والهدوء وسط الصحراء."</p>
+        <a href="#" class="btn btn-more-left">المزيد</a>
+      </div>
+    </div>
+  </div>
+  <!-- كرري الكارت 2 و 3 بنفس الشكل -->
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== القصص (Stories) ========== -->
+   <section class="destinations-section m-5">
+      <div class="container">
+        <h2 class="mb-4 text-end color-brown heading-decor">
+          <span class="word-bg">أماكن</span>
+          <span>تحكى حكاية </span> !
+        </h2>
+
+        <div class="row row-cards">
+  <div class="col-md-3 col-sm-6">
+    <div class="custom-card">
+      <div class="img-wrapper">
+        <img src="../assets/Mask group1.png" alt="سيوة" class="card-img">
+        <h5 class="card-title-overlay">سيوة!</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">"سيوة… واحة السحر والهدوء وسط الصحراء."</p>
+        <a href="#" class="btn btn-more-left">المزيد</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6">
+    <div class="custom-card">
+      <div class="img-wrapper">
+        <img src="../assets/Mask group1.png" alt="سيوة" class="card-img">
+        <h5 class="card-title-overlay">سيوة!</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">"سيوة… واحة السحر والهدوء وسط الصحراء."</p>
+        <a href="#" class="btn btn-more-left">المزيد</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-6">
+    <div class="custom-card">
+      <div class="img-wrapper">
+        <img src="../assets/Mask group1.png" alt="سيوة" class="card-img">
+        <h5 class="card-title-overlay">سيوة!</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">"سيوة… واحة السحر والهدوء وسط الصحراء."</p>
+        <a href="#" class="btn btn-more-left">المزيد</a>
+      </div>
+    </div>
+  </div>
+  <!-- كرري الكارت 2 و 3 بنفس الشكل -->
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== التجارب ========== -->
+    <section class="info-exper  py-5">
+  <div class="row align-items-center">
+    <!-- النص على اليمين -->
+    <div class="col-md-6  mb-4 mb-md-0">
+      <div class="text-exper">
+        <h2> تجارب سياحية أصيلة… وأجواء لا<br> تُنسى</h2>
+      <p>أماكن مليانة سحر وتجارب ناس <br>عاشوا فيها لحظات لا تُنسى، وكل <br>زيارة بتفتح باب لذكريات جديدة.</p>
+    
+      </div>
+    </div>
+    <div class="col-md-6  gap-3 images-side">
+  <div class="img-total">
+    <img src="../assets/img13.png" alt="صورة 1" class=" side-img">
+  <img src="../assets/img14.png" alt="صورة 2" class=" side-img ">
+  </div>
+  <img src="../assets/img12.png" alt="صورة 3" class=" side-Three">
+       </div>
+  </div>
+    </section>
+    <!-- ===========مصر العمر ============== -->
+     <section class="info mt-3 p-5">
+      <div class="row align-items-center">
+          <div class="col-md-6  mb-4 mb-md-0">
+      <div class="text-exper">
+        <h2>مصر… رحلة عمر !</h2>
+        <h4>وجهة تجمع بين الماضي و الحاضر</h4>
+      <p>أماكن مليانة سحر وتجارب ناس <br>عاشوا فيها لحظات لا تُنسى، وكل <br>زيارة بتفتح باب لذكريات جديدة.</p>
+    </div>
+          </div>
+          <div class="col-md-6  gap-3 images-side">
+  <div class="img-total">
+    <img src="../assets/img15.png" alt="صورة 1" class=" side-img">
+       </div>
+      </div>
+
+     </section>
+
+
+    <!-- start footer -->
+    <div class="card card-color p-5">
+      <div class="card-header mx-5"><h3>تواصل معنا</h3></div>
+      <div class="card-body d-flex">
+        <div class="mx-5 txt-color gap-5">
+          <div class="phone my-2">
+            <h5 class="card-title">
+              <i class="fa-solid fa-phone"></i>
+              أرقام الهاتف : 4567 123 0100 - 6543 987 0100
+            </h5>
+          </div>
+          <div class="email my-3">
+            <h5>
+              <i class="fa-solid fa-envelope"></i>
+              البريد الإلكتروني: support@Kemet.com
+            </h5>
+          </div>
+          <div class="map">
+            <h5>
+              <i class="fa-solid fa-location-dot"></i>
+              العنوان: القاهرة – جمهورية مصر العربية
+            </h5>
+          </div>
+          <div class="icon-social d-flex gap-3 fs-4 mx-4 py-4">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+        </div>
+        <div class="vertical-lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="card-body txt-color mx-5">
+          <h5 class="my-0">نحن هنا لنجعل رحلتكم أسهل وأكثر أمانًا</h5>
+          <h5 class="my-4">تواصلوا معنا في اي وقت، فنحن دائمًا بجانبكم</h5>
+          <h5>رحلتكم تبدا من هنا... وذكرياتهم لا تُنسى</h5>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/login.js"></script>
+    <script src="../Js/sign.js"></script>
+    <script src="../main.js"></script>
+  </body>
+</html>

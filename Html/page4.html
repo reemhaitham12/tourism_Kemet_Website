@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../CSS/page2.css" />
+    <link rel="stylesheet" href="../CSS/page4.css" />
+    <title>ملف شخصي</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="main-header">
+      <!-- الخلفية الزخرفية -->
+      <div class="navbar-bg">
+        <img src="../assets/Rectangle 1.png" alt="Decorative rectangle" />
+      </div>
+
+      <!-- الـ Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a href="../index.html">
+            <img
+              src="../assets/kemetLogo.png"
+              class="img-fluid logo"
+              alt="Kemet Logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- index -->
+                <a class="nav-link" href="../index.html">الصفحة الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <!-- page1 -->
+                <a class="nav-link" href="./page1.html">الأماكن السياحية</a>
+              </li>
+              <li class="nav-item">
+                <!-- page2 -->
+                <a class="nav-link" href="./page2.html">صفحة التفاعلات</a>
+              </li>
+              <li class="nav-item">
+                <!-- page3 -->
+                <a class="nav-link" href="./page3.html">شركات معتمدة</a>
+              </li>
+              <li class="nav-item">
+                <!-- page4 -->
+                <a class="nav-link active" href="./page4.html">الملف الشخصي</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header -->
+    <!-- start sign -->
+    <div class="login-icon" id="loginIcon">
+      <img src="../assets/icon.png" alt="Login" />
+    </div>
+
+    <!-- المودال -->
+    <div class="login-modal" id="loginModal">
+      <div class="modal-content" id="mainBox">
+        <div class="buttons">
+          <button class="btn-login" id="openLoginBox">تسجيل الدخول</button>
+          <button class="btn-signup">انشاء حساب</button>
+        </div>
+      </div>
+
+      <div class="login-box" id="loginBox">
+        <h3>تسجيل الدخول</h3>
+        <input type="text" placeholder="الاسم" />
+        <input type="email" placeholder="الايميل " />
+
+        <div class="or-divider">
+          <span></span>
+          <p>or</p>
+          <span></span>
+        </div>
+
+        <div class="social-icons">
+          <img src="../assets/facebook.png" />
+          <img src="../assets/instagram.png" />
+          <img src="../assets/google.png" />
+        </div>
+
+        <button class="save-btn">حفظ البيانات</button>
+        <p class="welcome-text">
+          أهلاً وسهلاً يسعدنا انضمامك إلينا <br />اليوم
+        </p>
+      </div>
+      <!-- بوكس إنشاء حساب -->
+      <div class="login-box" id="signupBox">
+        <h3>إنشاء حساب</h3>
+
+        <input type="text" placeholder="الاسم" />
+        <input type="email" placeholder="الايميل " />
+        <input type="password" placeholder="كلمة السر" />
+        <input type="password" placeholder="تأكيد كلمة السر" />
+
+        <button class="save-btn">إنشاء الحساب</button>
+
+        <p class="welcome-text">
+          أهلاً وسهلاً يسعدنا انضمامك إلينا <br />اليوم
+        </p>
+      </div>
+    </div>
+
+    <!-- end sign -->
+    <!-- build personal comment -->
+
+    <div
+      class="personal d-flex justify-content-lg-start align-items-center p-5 position-relative"
+    >
+      <div class="img-side">
+        <img src="../assets/personlogo.png" alt="girl person" />
+      </div>
+
+      <div class="text-personal p-5">
+        <h2>مريم وليد</h2>
+        <p>
+          مصرية "محب للسفر والاكتشاف <br />
+          عاشق لتجربة أماكن جديدة وثقافات <br />
+          مختلفة."
+        </p>
+      </div>
+
+      <div class="btn-edit position-absolute">تعديل الملف الشخصي</div>
+      <!-- بوكس تعديل الملف الشخصي -->
+      <div class="edit-modal" id="editModal">
+        <div class="edit-box">
+          <h3>تعديل الملف الشخصي</h3>
+
+          <input type="text" placeholder="الاسم" />
+          <input type="email" placeholder="الايميل" />
+          <input type="text" placeholder="رقم الهاتف" />
+
+          <button class="save-btn">حفظ البيانات</button>
+
+          <p class="welcome-text">
+            نحن سعداء لانضمامك إلينا <br />
+            نرحب بك فى موقع كيميت
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- زرار الإضافة -->
+    <div class="add-btn-container">
+      <div class="add-btn"><a href="../HTML/page6.html">+</a></div>
+
+      <div class="icons">
+        <i class="fa-solid fa-camera icon"></i>
+        <i class="fa-solid fa-image icon"></i>
+      </div>
+    </div>
+
+    <!-- end build personal comment -->
+
+    <!-- build comment -->
+    <div class="commentLogo d-flex justify-content-md-start align-items-center">
+      <div class="img-logo p-0">
+        <img src="../assets/personlogo.png" alt="girl person" />
+      </div>
+      <div class="text-personal">
+        <h2>مريم وليد</h2>
+        <p>انت</p>
+      </div>
+    </div>
+    <div class="container img-comment d-flex">
+      <div class="">
+        <img src="../assets/imageyou.png" alt="" class="desert" />
+      </div>
+      <div class="">
+        <p>
+          "دهب مليانة طاقة وبحر جميل، وسيوة خلتني أعيش هدوء<br />
+          وراحة وسط الطبيعة.. الرحلتين <br />كانوا أجمل تجربة في حياتي."<br />
+          "دهب مليانة طاقة وبحر جميل،<br />
+          وسيوة خلتني أعيش هدوء وراحة وسط الطبيعة.. الرحلتين<br />
+          كانوا أجمل تجربة في حياتي."
+        </p>
+        <div class="make-comment d-flex align-items-center p-3">
+          <div class="img-side">
+            <img src="../assets/Ellipsegirl.png" alt="user" />
+          </div>
+
+          <input
+            type="text"
+            name="comment"
+            id="comment"
+            placeholder="اضافة تعليق هنا"
+          />
+
+          <img src="../assets/arrow4.png" alt="arrow" class="arrow" />
+        </div>
+      </div>
+    </div>
+    <!-- line -->
+    <hr class="custom-line" />
+    <!-- line -->
+    <div class="comment d-flex justify-content-lg-start align-items-center p-2">
+      <div class="img-side px-5">
+        <img src="../assets/Ellipsegirl2.png" alt="girl person" />
+      </div>
+      <div class="text-personal">
+        <p>مصرية</p>
+        <h4>ماريا حكيم</h4>
+      </div>
+    </div>
+    <div class="text-comment container">
+      <p>
+        واحة سيوة جعلتني أشعر أنني في قطعة <br />
+        الجنة وسط الصحراء العيون الطبيعية هناك <br />منحتني راحة وانتعاشًا لا
+        مثيل له.
+      </p>
+    </div>
+    <div class="make-comment d-flex align-items-center p-3">
+      <div class="img-side">
+        <img src="../assets/Ellipsegirl.png" alt="user" />
+      </div>
+
+      <input
+        type="text"
+        name="comment"
+        id="comment"
+        placeholder="اضافة تعليق هنا"
+      />
+
+      <img src="../assets/arrow4.png" alt="arrow" class="arrow" />
+    </div>
+
+    <!-- line -->
+    <hr class="custom-line" />
+    <!-- line -->
+
+    <div
+      class="comment d-flex justify-content-lg-start align-items-center px-2"
+    >
+      <div class="img-side px-5">
+        <img src="../assets/Ellipsegirl2.png" alt="girl person" />
+      </div>
+      <div class="text-personal">
+        <p>مصرية</p>
+        <h4>ماريا حكيم</h4>
+      </div>
+    </div>
+    <div class="container img-comment d-flex">
+      <div class="">
+        <img src="../assets/image1.png" alt="" class="desert" />
+      </div>
+      <div class="">
+        <p>
+          تسلق جبل موسى عند الفجر كان تجربة روحية <br />لا تُنسى، منظر الشمس وهي
+          تشرق فوق الجبال<br />
+          أبهرني.
+        </p>
+        <div class="make-comment d-flex align-items-center p-3">
+          <div class="img-side">
+            <img src="../assets/Ellipsegirl.png" alt="user" />
+          </div>
+
+          <input
+            type="text"
+            name="comment"
+            id="comment"
+            placeholder="اضافة تعليق هنا"
+          />
+
+          <img src="../assets/arrow4.png" alt="arrow" class="arrow" />
+        </div>
+      </div>
+    </div>
+
+    <!-- line -->
+    <hr class="custom-line" />
+    <!-- line -->
+
+    <div class="comment d-flex justify-content-lg-start align-items-center p-2">
+      <div class="img-side px-5">
+        <img src="../assets/Ellipsegirl2.png" alt="girl person" />
+      </div>
+      <div class="text-personal">
+        <p>مصرية</p>
+        <h4>ماريا حكيم</h4>
+      </div>
+    </div>
+    <div class="text-comment container">
+      <p>
+        واحة سيوة جعلتني أشعر أنني في قطعة <br />
+        الجنة وسط الصحراء العيون الطبيعية هناك <br />منحتني راحة وانتعاشًا لا
+        مثيل له.
+      </p>
+    </div>
+    <div class="make-comment d-flex align-items-center p-3">
+      <div class="img-side">
+        <img src="../assets/Ellipsegirl.png" alt="user" />
+      </div>
+
+      <input
+        type="text"
+        name="comment"
+        id="comment"
+        placeholder="اضافة تعليق هنا"
+      />
+
+      <img src="../assets/arrow4.png" alt="arrow" class="arrow" />
+    </div>
+    <!-- line -->
+    <hr class="custom-line" />
+    <!-- line -->
+    <!-- start footer -->
+    <div class="card card-color p-5">
+      <div class="card-header mx-5"><h3>تواصل معنا</h3></div>
+      <div class="card-body d-flex">
+        <div class="mx-5 txt-color gap-5">
+          <div class="phone my-2">
+            <h5 class="card-title">
+              <i class="fa-solid fa-phone"></i>
+              أرقام الهاتف : 4567 123 0100 - 6543 987 0100
+            </h5>
+          </div>
+          <div class="email my-3">
+            <h5>
+              <i class="fa-solid fa-envelope"></i>
+              البريد الإلكتروني: support@Kemet.com
+            </h5>
+          </div>
+          <div class="map">
+            <h5>
+              <i class="fa-solid fa-location-dot"></i>
+              العنوان: القاهرة – جمهورية مصر العربية
+            </h5>
+          </div>
+          <div class="icon-social d-flex gap-3 fs-4 mx-4 py-4">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+        </div>
+        <div class="vertical-lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="card-body txt-color mx-5">
+          <h5 class="my-0">نحن هنا لنجعل رحلتكم أسهل وأكثر أمانًا</h5>
+          <h5 class="my-4">تواصلوا معنا في اي وقت، فنحن دائمًا بجانبكم</h5>
+          <h5>رحلتكم تبدا من هنا... وذكرياتهم لا تُنسى</h5>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+     
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/login.js"></script>
+    <script src="../Js/sign.js"></script>
+    <script src="../Js/edit.js"></script>
+    <script src="../main.js"></script>
+  </body>
+</html>

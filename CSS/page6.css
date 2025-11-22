@@ -1,0 +1,27 @@
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* العنصرين في طرفي الحاوية */
+  padding: 30px 40px;
+  margin: 50px 0;
+  width: 500px; /* أو الحجم اللي تحبيه للحاوية */
+}
+
+.share p {
+  margin: 0;
+  font-size: 20px;
+  color: #B36D47;
+  font-weight: 600;
+}
+
+.share .icon {
+  font-size: 28px;
+  color: #EBD391;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.share .icon:hover {
+  color: #C8A94A;
+  transform: scale(1.1);
+}

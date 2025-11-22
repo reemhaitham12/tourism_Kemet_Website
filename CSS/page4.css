@@ -1,0 +1,190 @@
+.btn-edit {
+    right: 980px;
+    bottom: 140px;
+  background-color: #B36D47;
+  color: #EBD391;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: #e6c04a;
+}
+
+/* زرار + */
+.add-btn-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.add-btn {
+  width: 90px;
+  height: 90px;
+  background-color: #EBD391;
+  color: #FDFFDB;
+  font-size: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.add-btn a {
+  text-decoration: none;
+  color: #5C2000;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1;
+}
+
+
+.add-btn:hover {
+  transform: translateY(5px);
+}
+
+/* الأيقونات */
+.icons {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.icon {
+  font-size: 30px;
+  color: #d4af37;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* عند الـ hover تظهر */
+.add-btn-container:hover .icons {
+  opacity: 1;
+  transform: translateY(10px);
+  pointer-events: all;
+}
+
+/* تأثير عند المرور على الأيقونات */
+.icon:hover {
+  color: #e6c04a;
+  transform: scale(1.1);
+}
+
+.commentLogo {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* المسافة بين الصورة والكلام */
+  padding: 20px 90px; /* padding بسيط بدل py-5 px-3 */
+}
+
+.img-logo {
+  width: 60px; /* حجم مناسب للدائرة */
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.text-personal p {
+  margin: 0;
+  color: #777;
+}
+
+.text-personal h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.text-personal h2{
+    color: #B36D47;
+}
+.text-personal h3{
+    color:#B36D47;
+}
+.text-personal p{
+    color:#B36D47;
+    font-size: 25px;
+} 
+
+
+/* مودال تعديل الملف الشخصي */
+.edit-modal {
+  display: none; /* مخفي افتراضياً */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(92, 32, 0, 0.5);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-box {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.edit-box h3 {
+  color: #B36D47;
+  margin-bottom: 20px;
+}
+
+.edit-box input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.edit-box .save-btn {
+  background-color: #B36D47;
+  color: #EBD391;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-box .save-btn:hover {
+  background-color: #e6c04a;
+}
+
+.edit-box .welcome-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #777;
+}

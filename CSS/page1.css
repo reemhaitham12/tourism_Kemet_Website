@@ -1,0 +1,52 @@
+/* إلغاء أي خلفية بيضاء في الصفحة */
+body {
+  background-color: transparent; /* لو الخلفية جاية من body */
+}
+
+/* الصندوق اللي بيحتوي الصورة */
+.image-box {
+  margin-bottom: 25px;
+  background: transparent; /* تأكد أن مفيش خلفية */
+  border: none;
+  box-shadow: none; /* علشان مايبقاش فيه ظل أبيض أو خلفية فاتحة */
+}
+
+/* الصور نفسها */
+.grid-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  background: transparent; /* تأكد أن الصورة نفسها مفيهاش خلفية */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير hover */
+.grid-img:hover {
+  transform: scale(1.03);
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .grid-img {
+    width: 95%;
+    border-radius: 12px;
+  }
+
+  .image-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* للموبايلات الصغيرة جدًا */
+@media (max-width: 480px) {
+  .grid-img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .image-box {
+    margin-bottom: 15px;
+  }
+}
